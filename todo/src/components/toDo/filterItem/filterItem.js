@@ -17,9 +17,10 @@ const FilterItem = ({filter, setFilter}) => {
 
         return (
             <button
-            className = {`btn ${classBtn}`}
-            onClick = {() => setFilter(filterType)}
-            > {label} </button>
+                key = {filterType}
+                className = {`btn ${classBtn}`}
+                onClick = {() => setFilter(filterType)}
+                > {label} </button>
         );
     });
 
