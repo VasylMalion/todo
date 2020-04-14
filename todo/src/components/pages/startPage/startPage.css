@@ -1,0 +1,15 @@
+.fullTodo {
+    position: fixed;
+    bottom: -10px;
+    right: 20px;
+    padding: 0px;
+}
+
+.todoSpan {
+    display: block;
+    height: 50px;
+    color: white;
+    text-align: right;
+    padding-top: 30px;
+    font-size: 18px;
+}

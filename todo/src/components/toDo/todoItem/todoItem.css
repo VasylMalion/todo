@@ -1,0 +1,18 @@
+.delete {
+    position: relative;
+    top: 3px;
+    left: 2px;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
+
+.labelItem {
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.labelItem:hover {
+    cursor: pointer;
+}

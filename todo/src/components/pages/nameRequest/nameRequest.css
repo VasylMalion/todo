@@ -1,0 +1,28 @@
+.questionDiv {
+    display: grid;
+    justify-content: center;
+}
+
+.question {
+    display: grid;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    bottom: 20px;
+}
+
+.inputName {
+    border: none;
+    outline:none;
+    background-color: transparent;
+    border-bottom: white 2px solid;
+    text-align: center;
+    color: white;
+    width: 400px;
+    font-size: 40px;
+}
+
+.formAnswer {
+    display: grid;
+    justify-content: center;
+}

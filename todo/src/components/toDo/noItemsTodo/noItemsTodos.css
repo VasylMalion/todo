@@ -1,0 +1,12 @@
+.noTodos {
+    padding: 20px 0px 50px 0px;
+    text-align: center;
+}
+
+.addTodoSpan {
+    color: #737273;
+}
+
+.noTodosSpan {
+    color: #959ea8;
+}

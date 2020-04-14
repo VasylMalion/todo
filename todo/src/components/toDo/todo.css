@@ -1,0 +1,9 @@
+.todo {
+    position: relative;
+    top: 25px;
+    background-color: #0e1618;
+    color: white;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}

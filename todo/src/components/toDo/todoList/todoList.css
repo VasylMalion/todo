@@ -1,0 +1,9 @@
+.todoList {
+    padding: 4px 0px 0px 6px;
+    font-size: 16px;
+}
+
+.doneTodoItem {
+    color: #959ea8;
+    text-decoration: line-through;
+}
