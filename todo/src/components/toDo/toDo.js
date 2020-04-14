@@ -3,20 +3,21 @@ import {CountToDo} from "./countToDo/countToDo";
 import {NoItemsTodos} from "./noItemsTodo/noItemsTodos";
 import {AddTodoItem} from "./addTodoItem/addTodoItem";
 import {TodoList} from "./todoList/todoList";
+import {FilterItem} from "./filterItem/filterItem";
 import './todo.css';
 
 const ToDo = () => {
 
     const [todos, setTodos] = useState([]);
-    const [count, setCount] = useState(0);
     const [id, setId] = useState(1);
+    const [filter, setFilter] = useState('all');
 
     const addTodo = (label) => {
         const newItem = { id, label: label, done: false};
         const newTodos = [
-                ...todos,
-                newItem
-            ];
+            ...todos,
+            newItem
+        ];
 
         setTodos(newTodos);
         setId(id + 1);
@@ -49,14 +50,32 @@ const ToDo = () => {
         setTodos(newArray);
     };
 
+    const filterAllItems = (filter, todos) => {
+        switch (filter){
+            case 'all':
+                return todos;
+            case 'active':
+                return todos.filter( item => !item.done);
+            case 'done':
+                return todos.filter( item => item.done);
+            default:
+                return todos;
+        }
+    };
+
     const todosLen = (todos.length === 0) ?
-        <NoItemsTodos/> : <TodoList
-            todos = {todos}
-            count = {count}
-            deleteItem = {deleteItem}
-            setCount = {setCount}
-            doneItem = {doneItem}
-        />;
+        <NoItemsTodos/> : <div>
+            <FilterItem
+                filter = {filter}
+                setFilter = {setFilter}
+            />
+            <TodoList
+                todos = {todos}
+                deleteItem = {deleteItem}
+                doneItem = {doneItem}
+                filter={filter}
+                filterAllItems = {filterAllItems}
+            /></div>;
 
     const doneCount = todos.filter( el => !el.done).length;
 

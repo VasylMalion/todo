@@ -2,9 +2,9 @@ import React from "react";
 import {TodoItem} from "../todoItem/todoItem";
 import './todoList.css';
 
-const TodoList = ({todos, doneItem, deleteItem}) => {
+const TodoList = ({todos, doneItem, deleteItem, filterAllItems, filter}) => {
 
-    const todosMap = todos.map( item => {
+    const todosMap = filterAllItems(filter, todos).map( item => {
 
         let classTodoItem = 'todoList';
 
@@ -24,7 +24,9 @@ const TodoList = ({todos, doneItem, deleteItem}) => {
         </div>
     });
 
-    return <div> {todosMap} </div>
+    return (todosMap.length > 0) ?
+        <div> {todosMap} </div> :
+        <span className = 'noItems' > There are no items</span>;
 };
 
 export {TodoList}

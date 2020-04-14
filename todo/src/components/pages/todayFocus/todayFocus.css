@@ -1,4 +1,6 @@
 .focusToday {
+    display: flex;
+    justify-content: center;
     position: relative;
     margin-top: 20px;
     color: white;
